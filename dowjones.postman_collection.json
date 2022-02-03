@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "9546345c-a77a-4213-93ba-49cf67843600",
+		"name": "dowjones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/dowjones",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/dowjones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dowjones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/dowjones/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dowjones/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dowjones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/dowjones/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"quarter\":\"1\",\"stock\":\"BAC\",\"date\":\"2011-02-18\",\"open\":\"14.77\",\"high\":\"14.95\",\"low\":\"14.69\",\"close\":\"14.75\",\"volume\":\"458423511\",\"percentChangePrice\":\"-0.13541\",\"percentChangeVolumeOverLastWeek\":\"-38.58744486\",\"previousWeeksVolume\":\"746465458\",\"nextWeeksOpen\":\"14.38\",\"nextWeeksClose\":\"14.20\",\"percentChangeNextWeeksPrice\":\"-1.25174\",\"daysToNextDividend\":\"12\",\"percentReturnNextDividend\":\"0.0677966\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dowjones/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dowjones",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/dowjones/upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/alex/github/spring-boot-dowjones/dow_jones_index/dow_jones_index_frgm.data"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dowjones/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dowjones",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
